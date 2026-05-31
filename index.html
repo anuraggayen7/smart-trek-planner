@@ -11,10 +11,10 @@
 
 <body>
 
-    <header>
+    <header id="top">
         <nav>
             <h1>
-                <a href="#"> Smart Trek Planner </a>
+                <a href="#top"> Smart Trek Planner </a>
             </h1>
 
             <ul>
@@ -49,34 +49,32 @@
 
         <section id="treks">
             <h2> Featured Treks </h2>
-            <div>
+            <div class="trek-cards">
 
-                <div>
+                <div class="trek-card">
                     <h3> Hampta Pass</h3>
-                    <p>Difficulty: Moderate</p>
-                    <p>Duration: 5D/4N</p>
-                    <p>Description: A scenic trek connecting the Kullu and Spiti valleys</p>
-                    <button>View Trek Details</button>
+                    <p> Difficulty: Moderate </p>
+                    <p> Duration: 5D/4N </p>
+                    <p> Description: A scenic trek connecting the Kullu and Spiti valleys </p>
+                    <button> View Trek Details </button>
                 </div>
 
-                <div>
+                <div class="trek-card">
                     <h3> Sandakphu Phallut </h3>
                     <p> Difficulty: Moderate </p>
-                    <p> Duration: 6D/5N</p>
+                    <p> Duration: 6D/5N </p>
                     <p> Description: The highest trek in West Bengal, offering views of Everest, Kanchenjunga, Lhotse,
-                        and
-                        Makalu</p>
-                    <button>View Trek Details</button>
+                        and Makalu </p>
+                    <button> View Trek Details </button>
                 </div>
 
-                <div>
+                <div class="trek-card">
                     <h3> Triund Trek </h3>
-                    <p>Difficulty: Easy</p>
-                    <p>Duration: 2D/1N</p>
-                    <p>Description: A beginner-friendly trek near McLeod Ganj with stunning views of the Dhauladhar
-                        range
-                    </p>
-                    <button>View Trek Details</button>
+                    <p> Difficulty: Easy </p>11
+                    <p> Duration: 2D/1N </p>
+                    <p> Description: A beginner-friendly trek near McLeod Ganj with stunning views of the Dhauladhar
+                        range </p>
+                    <button> View Trek Details </button>
                 </div>
 
             </div>
@@ -84,6 +82,19 @@
         </section>
 
         <section id="budget-planner">
+            <h2> Budget Planner </h2>
+            <p> Estimate your trek cost </p>
+
+            <div class="budget-form">
+                <label for="trek"> Destination: </label>
+                <select id="trek">
+                    <option value="" disabled selected> Choose Your Trek </option>
+                    <option value="hampta"> Hampta Pass </option>
+                    <option value="sandakphu"> Sandakphu Phallut</option>
+                    <option value="triund"> Triund </option>
+                </select>
+            </div>
+
         </section>
 
         <section id="about-us">
