@@ -13,7 +13,7 @@
 
     <header id="top">
         <nav>
-            <h1>
+            <h1 class="logo">
                 <a href="#top"> Smart Trek Planner </a>
             </h1>
 
@@ -70,7 +70,7 @@
 
                 <div class="trek-card">
                     <h3> Triund Trek </h3>
-                    <p> Difficulty: Easy </p>11
+                    <p> Difficulty: Easy </p>
                     <p> Duration: 2D/1N </p>
                     <p> Description: A beginner-friendly trek near McLeod Ganj with stunning views of the Dhauladhar
                         range </p>
@@ -85,7 +85,15 @@
             <h2> Budget Planner </h2>
             <p> Estimate your trek cost </p>
 
-            <div class="budget-form">
+            <form class="budget-form">
+                <label for="starting-city">Starting City</label>
+                <select id="starting-city">
+                    <option value="" disabled selected>Select City</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                </select>
                 <label for="trek"> Destination: </label>
                 <select id="trek">
                     <option value="" disabled selected> Choose Your Trek </option>
@@ -93,21 +101,107 @@
                     <option value="sandakphu"> Sandakphu Phallut</option>
                     <option value="triund"> Triund </option>
                 </select>
-            </div>
+                <label for="trekkers">Number of Trekkers:</label>
+                <select id="trekkers">
+                    <option value="" disabled selected>Select Group Size</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10plus">10+</option>
+                </select>
+                <label for="custom-trekkers">Group Size (if 10+):</label>
+                <input type="number" id="custom-trekkers" min="10" placeholder="Enter group size">
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" min="1" placeholder="Enter number of days">
+                <label for="transport">Transport Mode:</label>
+                <select id="transport">
+                    <option value="" disabled selected>Select Transport</option>
+                    <option value="train">Train</option>
+                    <option value="bus">Bus</option>
+                    <option value="flight">Flight</option>
+                </select>
+                <label for="accommodation">Accommodation Type:</label>
+                <select id="accommodation">
+                    <option value="" disabled selected>Select Accommodation</option>
+                    <option value="budget">Budget</option>
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <button type="button" id="calculate-budget">
+                    Calculate Budget
+                </button>
+                <div id="budget-result">
+                    Estimated Budget: ₹0
+                </div>
+            </form>
 
         </section>
 
         <section id="about-us">
+            <h2>About Smart Trek Planner</h2>
+
+            <p>
+                Smart Trek Planner helps trekkers plan their adventures by
+                providing trek information, budget estimation, and trip
+                planning tools.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Trek Discovery</h3>
+                    <p>Explore popular trekking destinations.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Budget Planning</h3>
+                    <p>Estimate travel and accommodation expenses.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Trip Preparation</h3>
+                    <p>Plan your trek efficiently before departure.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact-us">
+            <h2>Contact Us</h2>
+
+            <p>
+                Have questions, suggestions, or feedback? We'd love to hear from you.
+            </p>
+
+            <form class="contact-form">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
         </section>
+
+
 
     </main>
 
 
     <footer>
-
+        <p>&copy; 2026 Smart Trek Planner. All Rights Reserved.</p>
     </footer>
 
 </body>
